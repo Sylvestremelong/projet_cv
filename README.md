@@ -22,3 +22,7 @@ Lancer `ng generate component component-name` pour générer un component. You c
 ## Build
 
 Lancer `ng build` pour build le projet. Les artefacts builds sont dans le repo `dist/`
+
+## Lancement test unitaires
+
+Lancer `ng test` pour exécuter les tests unitaires avec [Karma](https://karma-runner.github.io).
