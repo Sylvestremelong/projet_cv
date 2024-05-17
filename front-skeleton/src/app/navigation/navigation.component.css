@@ -1,0 +1,35 @@
+/* navigation.component.css */
+nav {
+    background-color: #333; /* Background color of the navigation */
+    padding: 10px; /* Padding around the navigation */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add space between list items */
+  }
+  
+  a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+
+  }
+  
+  a:hover {
+    color: #ddd; /* Link color on hover */
+    cursor: pointer;
+  }
+  
+  .active {
+    font-weight: bold; /* Style for active link */
+  }
+  
+  .left-move {
+    margin-left: 68% !important; /* Move the item to the right */
+  }

@@ -1,0 +1,69 @@
+<!-- education.component.html -->
+
+<div class="education-form">
+  <h2>Education</h2>
+  <form #educationForm="ngForm">
+    <div class="form-group">
+      <label for="universityName">University Name*</label>
+      <input
+        type="text"
+        id="universityName"
+        name="universityName"
+        [(ngModel)]="formData.universityName"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="universityLocation">University Location*</label>
+      <input
+        type="text"
+        id="universityLocation"
+        name="universityLocation"
+        [(ngModel)]="formData.universityLocation"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="degree">Degree*</label>
+      <input
+        type="text"
+        id="degree"
+        name="degree"
+        [(ngModel)]="formData.degree"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="fieldOfStudy">Field of Study*</label>
+      <input
+        type="text"
+        id="fieldOfStudy"
+        name="fieldOfStudy"
+        [(ngModel)]="formData.fieldOfStudy"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="graduationMonthYear">Month and Year of Graduation*</label>
+      <input
+        type="month"
+        id="graduationMonthYear"
+        name="graduationMonthYear"
+        [(ngModel)]="formData.graduationMonthYear"
+        required
+      />
+    </div>
+
+    <button (click)="onSubmit()">Submit</button>
+    <button
+      style="margin-left: 10px; background-color: grey"
+      (click)="clearForm()"
+    >
+      Clear
+    </button>
+  </form>
+</div>

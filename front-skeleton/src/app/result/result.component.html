@@ -1,0 +1,32 @@
+<div class="cv-container">
+  <div class="personal-info">
+    <h2>Personal Information</h2>
+    <p><b>Name:</b> {{ personal.firstName }}</p>
+    <p><b>Email:</b> {{ personal.email }}</p>
+    <p><b>Phone:</b> {{ personal.phone }}</p>
+    <p><b>City:</b> {{ personal.city }}</p>
+  </div>
+
+  <div class="experience">
+    <h2>Experience</h2>
+    <p><b>Position:</b> {{ experience.position }}</p>
+    <p><b>Company:</b> {{ experience.companyName }}</p>
+  </div>
+
+  <div class="education">
+    <h2>Education</h2>
+    <p><b>Degree:</b> {{ education.degree }}</p>
+    <p><b>University:</b> {{ education.universityName }}</p>
+    <p><b>Location:</b> {{ education.universityLocation }}</p>
+    <p><b>Graduation:</b> {{ education.graduationMonthYear }}</p>
+  </div>
+
+  <div class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div *ngFor="let skill of skills; let i = index" class="skill">
+        {{ skill }}
+      </div>
+    </div>
+  </div>
+</div>
