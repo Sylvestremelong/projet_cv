@@ -1,0 +1,21 @@
+<div class="skills-container">
+  <h2>Add Skills</h2>
+  <div class="input-container">
+    <input
+      type="text"
+      id="skillInput"
+      name="skillInput"
+      [(ngModel)]="newSkill"
+    />
+    <button (click)="saveSkill()">Save</button>
+  </div>
+  <div class="skills-list">
+    <div *ngFor="let skill of skills; let i = index" class="skill">
+      {{ skill }}
+      <span class="remove-icon" (click)="removeSkill(i)">x</span>
+    </div>
+  </div>
+  <button (click)="submitSkills()" [disabled]="skills.length === 0">
+    Submit
+  </button>
+</div>

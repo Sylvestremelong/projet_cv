@@ -1,0 +1,83 @@
+<!-- experience.component.html -->
+
+<div class="work-history-form">
+  <h2>Work History</h2>
+  <form #workHistoryForm="ngForm">
+    <div class="form-group">
+      <label for="companyName">Company Name*</label>
+      <input
+        type="text"
+        id="companyName"
+        name="companyName"
+        [(ngModel)]="formData.companyName"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="position">Position*</label>
+      <input
+        type="text"
+        id="position"
+        name="position"
+        [(ngModel)]="formData.position"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="startYear">Start Year:</label>
+      <input
+        type="number"
+        id="startYear"
+        name="startYear"
+        [(ngModel)]="formData.startYear"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="endYear">End Year:</label>
+      <input
+        type="number"
+        id="endYear"
+        name="endYear"
+        [(ngModel)]="formData.endYear"
+        required
+        min="1900"
+        max="2100"
+        [disabled]="isStillWorking"
+      />
+    </div>
+
+    <div class="form-group">
+      <input
+        type="radio"
+        id="stillWorking"
+        name="employmentStatus"
+        [(ngModel)]="isStillWorking"
+        [value]="true"
+      />
+      <label for="stillWorking">Still Working Here</label>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="radio"
+        id="notWorking"
+        name="employmentStatus"
+        [(ngModel)]="isStillWorking"
+        [value]="false"
+      />
+      <label for="notWorking">Not Working Here</label>
+    </div>
+
+    <button (click)="onSubmit()">Submit</button>
+    <button
+      style="margin-left: 10px; background-color: grey"
+      (click)="clearForm()"
+    >
+      Clear
+    </button>
+  </form>
+</div>
